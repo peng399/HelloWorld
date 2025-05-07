@@ -15,6 +15,12 @@ namespace Hello_World
         public Form1()
         {
             InitializeComponent();
+
+            labTime.Text = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
+
+            timer1.Interval = 1000;
+            timer1.Tick += timer1_Tick;
+            timer1.Start();
         }
 
         private void btnSay_Click(object sender, EventArgs e)
@@ -30,6 +36,11 @@ namespace Hello_World
                 await Task.Delay(1000);
             }
             labCount.Text = "label2";
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            labTime.Text = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
         }
     }
 }
