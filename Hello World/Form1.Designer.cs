@@ -30,6 +30,8 @@
         {
             this.btnSay = new System.Windows.Forms.Button();
             this.labHelloWorld = new System.Windows.Forms.Label();
+            this.btnCount = new System.Windows.Forms.Button();
+            this.labCount = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnSay
@@ -53,11 +55,34 @@
             this.labHelloWorld.TabIndex = 1;
             this.labHelloWorld.Text = "label1";
             // 
+            // btnCount
+            // 
+            this.btnCount.Font = new System.Drawing.Font("新細明體", 20F);
+            this.btnCount.Location = new System.Drawing.Point(376, 52);
+            this.btnCount.Name = "btnCount";
+            this.btnCount.Size = new System.Drawing.Size(271, 116);
+            this.btnCount.TabIndex = 2;
+            this.btnCount.Text = "Count";
+            this.btnCount.UseVisualStyleBackColor = true;
+            this.btnCount.Click += new System.EventHandler(this.btnCount_Click);
+            // 
+            // labCount
+            // 
+            this.labCount.AutoSize = true;
+            this.labCount.Font = new System.Drawing.Font("新細明體", 20F);
+            this.labCount.Location = new System.Drawing.Point(370, 291);
+            this.labCount.Name = "labCount";
+            this.labCount.Size = new System.Drawing.Size(93, 34);
+            this.labCount.TabIndex = 3;
+            this.labCount.Text = "label2";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labCount);
+            this.Controls.Add(this.btnCount);
             this.Controls.Add(this.labHelloWorld);
             this.Controls.Add(this.btnSay);
             this.Name = "Form1";
@@ -71,6 +96,8 @@
 
         private System.Windows.Forms.Button btnSay;
         private System.Windows.Forms.Label labHelloWorld;
+        private System.Windows.Forms.Button btnCount;
+        private System.Windows.Forms.Label labCount;
     }
 }
 

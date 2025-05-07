@@ -21,5 +21,15 @@ namespace Hello_World
         {
             labHelloWorld.Text = "Hello World!";
         }
+
+        private async void btnCount_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 11; i++)
+            {
+                labCount.Text = i.ToString();
+                await Task.Delay(1000);
+            }
+            labCount.Text = "label2";
+        }
     }
 }
